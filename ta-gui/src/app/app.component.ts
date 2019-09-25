@@ -14,6 +14,7 @@ export class AppComponent {
    aluno: Aluno = {nome: "", cpf: "", email: "", login_git: ""};
    alunoService = new AlunoService();
    alunos: Aluno[] = []
+   cpfduplicado: boolean = false;
 
    gravar(a: Aluno): void {
      if (this.alunoService.gravar(a)) {
@@ -22,8 +23,11 @@ export class AppComponent {
        /*lembra que isso ta vinculado com o ngModel, 
       assim que um aluno é cadastrado, esses valores são zerados*/
      } else {
-       this.aluno.cpf = "";
+       this.cpfduplicado = true;
      }
    }
+   onMove(): void {
+    this.cpfduplicado = false;
+  }
 }
 
