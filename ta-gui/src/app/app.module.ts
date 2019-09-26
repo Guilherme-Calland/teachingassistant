@@ -4,10 +4,12 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AlunoService } from './aluno.service';
 import { AppComponent } from './app.component';
+import { MetasComponent } from './metas.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MetasComponent
   ],
   imports: [
     

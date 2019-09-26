@@ -33,25 +33,5 @@
     <td><input [(ngModel)]="aluno.login_git"></td>
   </table>
 
-  <table class = "alunos">
-    <tr *ngIf = "alunos.length > 0">
-      <td>Nome</td>
-      <td>CPF</td>
-      <td>email</td>
-      <td>login</td>
-      <td>Requisitos</td>
-      <td>Gerencia de configuracao</td>
-    </tr>
-<!-- ul = unordered list -->
-<!-- li = list item -->
-<!-- span = define uma secao em um documento -->
-    <tr *ngFor="let a of alunos">
-      <td>{{a.nome}}</td>
-      <td>{{a.cpf}}</td>
-      <td>{{a.email}}</td>
-      <td>{{a.login_git}}</td>
-      <td><input [(ngModel)]="a.metas['requisitos']" (change) = "atualizarAluno(a)"></td>
-      <td><input [(ngModel)]="a.metas['gerDeConfiguracao']" (change)="atualizarAluno(a)"></td>
-    </tr>
-  </table>    
+ <metas [alunos]="alunos"></metas>
 </html>

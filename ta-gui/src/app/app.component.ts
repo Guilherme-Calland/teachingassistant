@@ -25,9 +25,5 @@ export class AppComponent {
     this.cpfduplicado = false;
   }
 
-  atualizarAluno(aluno: Aluno):void{
-    this.alunoService.atualizar(aluno)
-  }
-
 }
 
