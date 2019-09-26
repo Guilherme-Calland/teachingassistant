@@ -4,6 +4,7 @@ export class Aluno {
   email: string;
   login_git: string;
   metas: Map<string, string>
+
   constructor(){
     this.clean();
   }
@@ -16,7 +17,7 @@ export class Aluno {
     this.metas = new Map<string,string>();
   }
 
-  clone():Aluno{
+  clone():Aluno {
     var aluno: Aluno = new Aluno()
     aluno.nome = this.nome
     aluno.cpf = this.cpf

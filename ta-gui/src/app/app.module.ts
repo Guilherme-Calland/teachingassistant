@@ -1,13 +1,12 @@
-//modulos são uma composicao d componetntes, serviços etc
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule }   from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { AlunoService } from './aluno.service';
 import { MetasComponent } from './metas.component';
-import { AlunoService } from './aluno.service'
+import { AlunosComponent } from './alunos.component';
+import { AlunoService } from './aluno.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +15,6 @@ import { AlunoService } from './aluno.service'
     AlunosComponent
   ],
   imports: [
-    
     BrowserModule,
     FormsModule,
     RouterModule.forRoot([
