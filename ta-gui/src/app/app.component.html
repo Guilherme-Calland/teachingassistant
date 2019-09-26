@@ -1,37 +1,15 @@
-<html (mousemove)="onMove()">
+<html>
   <h1>
     Teaching Assistant
   </h1>
-  <h2>
-    Alunos
-  </h2>
+  <!-- nav = links de navegacao -->
+  <!-- a = define um hiperlink -->
+  <nav> 
+    <!-- routerLink define o caminho que o usuario vai seguir pra
+    chegar no destino apontado pelo link -->
+    <a routerLink = "/alunos">Alunos</a>
+    <a routerLink = "/metas">Metas</a>
+  </nav>
 
-  <!-- 
-  tr = table row
-  td = celula da table 
-  th = header cell in a table
-  -->
-
-  <table>
-  <tr>
-    <td><label>Nome </label></td>
-    <td><input [(ngModel)]="aluno.nome" ></td>
-    <td><button (click)="criarAluno(aluno)">Adicionar</button></td>
-  </tr>
-  <tr>
-    <td><label>CPF </label></td>
-    <td><input [(ngModel)]="aluno.cpf" ></td>
-    <td *ngIf="cpfduplicado">
-        Já existe um aluno com esse CPF!
-    </td>
-  </tr>
-  <tr>
-    <td><label>e-mail </label></td>
-    <td><input [(ngModel)]="aluno.email" ></td>
-  </tr>
-    <td>git login</td>
-    <td><input [(ngModel)]="aluno.login_git"></td>
-  </table>
-
- <metas [alunos]="alunos"></metas>
+  <router-outlet></router-outlet>
 </html>

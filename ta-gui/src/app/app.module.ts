@@ -2,19 +2,33 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { AlunoService } from './aluno.service';
+import { RouterModule }   from '@angular/router';
+
 import { AppComponent } from './app.component';
+import { AlunoService } from './aluno.service';
 import { MetasComponent } from './metas.component';
+import { AlunoService } from './aluno.service'
 
 @NgModule({
   declarations: [
     AppComponent,
-    MetasComponent
+    MetasComponent,
+    AlunosComponent
   ],
   imports: [
     
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot([
+      {
+        path: 'metas',
+        component: MetasComponent
+      },
+      {
+        path: 'alunos',
+        component: AlunosComponent
+      }
+    ])
   ],
   providers: [AlunoService],
   bootstrap: [AppComponent]
