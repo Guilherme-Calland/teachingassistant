@@ -6,14 +6,17 @@
     Alunos
   </h2>
 
-  <!-- tr = table row
-  td = celula da table -->
+  <!-- 
+  tr = table row
+  td = celula da table 
+  th = header cell in a table
+-->
 
   <table>
   <tr>
     <td><label>Nome </label></td>
     <td><input [(ngModel)]="aluno.nome" ></td>
-    <td><button (click)="gravar(aluno)">Adicionar</button></td>
+    <td><button (click)="criarAluno(aluno)">Adicionar</button></td>
   </tr>
   <tr>
     <td><label>CPF </label></td>
@@ -30,15 +33,25 @@
     <td><input [(ngModel)]="aluno.login_git"></td>
   </table>
 
+  <table class = "alunos">
+    <tr *ngIf = "alunos.length > 0">
+      <td>Nome</td>
+      <td>CPF</td>
+      <td>email</td>
+      <td>login</td>
+      <td>Requisitos</td>
+      <td>Gerencia de configuracao</td>
+    </tr>
   <!-- ul = unordered list -->
   <!-- li = list item -->
   <!-- span = define uma secao em um documento -->
-  <ul class="alunos">
-  <li *ngFor="let a of alunos">
-        {{a.nome}},
-        {{a.cpf}},
-        {{a.email}},
-        {{a.login_git}}
-    </li>
-    </ul>
-  </html>
+    <tr *ngFor="let a of alunos">
+      <td>{{a.nome}}</td>
+      <td>{{a.cpf}}</td>
+      <td>{{a.email}}</td>
+      <td>{{a.login_git}}</td>
+      <td><input [(ngModel)]="a.metas['requisitos']" (change) = "atualizarAluno(a)"></td>
+      <td><input [(ngModel)]="a.metas['gerDeConfiguracao']" (change)="atualizarAluno(a)"></td>
+    </tr>
+ </table>    
+</html>
