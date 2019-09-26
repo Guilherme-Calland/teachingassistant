@@ -2,7 +2,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
+import { AlunoService } from './aluno.service';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -14,7 +14,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AlunoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
