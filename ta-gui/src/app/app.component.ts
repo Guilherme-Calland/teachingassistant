@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NgModule } from '@angular/core';
-import { Aluno } from './aluno';
 import { AlunoService } from './aluno.service';
+import { Aluno } from '../../../common/aluno';
 
 @Component({
   selector: 'app-root',
