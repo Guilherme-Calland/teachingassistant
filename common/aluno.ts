@@ -1,25 +1,23 @@
 export class Aluno {
-    nome: string;
-    cpf: string;
-    email: string;
-    login_git: string;
-    metas: Map<string,string>;
-  
-    constructor() {
-      this.clean();
-    }
-  
-    clean(): void {
-        this.nome = "";
-        this.cpf = "";
-        this.email = "";
-        this.metas = new Map<string,string>();
+  nome: string;
+  cpf: string;
+  email: string;
+  metas: Map<string,string>;
+
+  constructor() {
+    this.clean();
   }
 
-    clone(): Aluno {
-        var aluno: Aluno = new Aluno();
-        aluno.metas = new Map<string,string>();
-        aluno.copyFrom(this);
+  clean(): void {
+    this.nome = "";
+    this.cpf = "";
+    this.email = "";
+    this.metas = new Map<string,string>();
+  }
+
+  clone(): Aluno {
+    var aluno: Aluno = new Aluno();
+    aluno.copyFrom(this);
     return aluno;
   }
 
@@ -36,4 +34,4 @@ export class Aluno {
       this.metas[key] = from[key];
     }
   }
-} 
+}

@@ -15,7 +15,6 @@ import { AlunoService } from './aluno.service';
     alunos: Aluno[];
 
     atualizarAluno(aluno: Aluno): void {
-      /*retorna um observable de aluno em a*/
       this.alunoService.atualizar(aluno).subscribe(
          (a) => { if (a == null) alert("Unexpected fatal error trying to update student information! Please contact the systems administratos."); },
          (msg) => { alert(msg.message); }
