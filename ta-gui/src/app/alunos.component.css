@@ -18,7 +18,7 @@
 
   button {
    font-family: Arial;
-   background-color:  lime;
+   background-color: #green;
    border: none;
    padding: 5px 10px;
    border-radius: 4px;
@@ -26,5 +26,5 @@
    cursor: hand;
  }
  button:hover {
-   background-color: red;
+   background-color: #cfd8dc;
  }
